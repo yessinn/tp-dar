@@ -11,4 +11,4 @@ Chaque TP a son propre dossier, avec son code Java et son compte rendu (`README.
 | [TP3](TP3/) | Serveur multi-threads - sockets TCP | ✅ Terminé |
 | [TP4](TP4/) | Sockets en mode non-connecté UDP | ✅ Terminé |
 | [TP5](TP5/) | Invocation de méthodes distantes avec Java RMI | ✅ Terminé |
-| [TP6](TP6/) | Communications client-serveur via CORBA | À faire |
+| [TP6](TP6/) | Communications client-serveur via CORBA | ✅ Terminé |
