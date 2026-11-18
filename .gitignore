@@ -1,0 +1,11 @@
+# Classes compilées
+out/
+bin/
+*.class
+
+# IDE
+.idea/
+*.iml
+.settings/
+.project
+.classpath
