@@ -1,0 +1,28 @@
+// Interface du service bancaire, indépendante du langage (IDL CORBA).
+// Compilation : idlj -fall -v Banque.idl  (génère le package Java corbaBanque)
+
+module corbaBanque {
+
+    // Compte : structure de données (copiée par valeur entre client et serveur)
+    struct Compte {
+        long  code;
+        float solde;
+    };
+
+    // Tableau (séquence de taille variable) de comptes
+    typedef sequence<Compte> tabComptes;
+
+    // Erreur métier renvoyée au client (code existant, inconnu, solde insuffisant...)
+    exception OperationRefusee {
+        string message;
+    };
+
+    interface IBanqueRemote {
+        void       creerCompte(in Compte cpte)          raises (OperationRefusee);
+        void       verser(in float mt, in long code)    raises (OperationRefusee);
+        void       retirer(in float mt, in long code)   raises (OperationRefusee);
+        Compte     getCompte(in long code)              raises (OperationRefusee);
+        tabComptes getComptes();
+        double     conversion(in float mt);
+    };
+};
